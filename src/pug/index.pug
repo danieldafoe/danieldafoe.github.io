@@ -1,53 +1,64 @@
 - var pageTitle = 'Daniel Dafoe | Inclusive Web Developer in Toronto, Canada';
-- var ctaTitle = "Test";
 
 doctype html
 html(lang='en')
 
-  include _head
+  include partials/_head
 
   body
-    a(href='#about') Skip to About section
+    main.home
+      header
+        p(aria-label='Daniel Dafoe').logo daniel #[br]d#[a(href='defoe-vs-dafoe.pug' aria-label="Dafoe with an 'a'") a]foe
 
-    main.wrapper
-      section.intro
-        div.greeting
-          h1.title Leave no user behind.
-          p.subtitle Daniel Dafoe
+        .home__links
+          a(href='./boring.pug') Link Farm
+          a(href='./guestbook.pug') Guestbook
 
-      section.about(id='about')
-        .inner
-          p.
-            Inclusiveness and accessibility matter most to me when designing and building web experiences.
+      aside.banner
+        p This website #[strong doesn't] use cookies, but here's one for you: #[span 🍪]
+        button.primary(type='button') Thanks!
 
-          p. 
-            My introduction to the world of web accessibility was in 2013 when tasked with testing internal 
-            applications at RBC with a screen reader, JAWS. Since then it has been a principle of mine that 
-            everything I produce is usable by everyone.
+      .products
+        .product
+          h2.product__title Tier 1: #[br]Detailed
+          p.product__price FREE
+          h3.product__features-title What's included
+          ul.product__features
+            li Read my 20,000 word memoir
+            li Chat for 30 minutes with my parents
+            li Review my Grade 3 report card
+          a.product__action.link--btn(href='./tier-1.pug') Redeem Tier 1
 
-          p.
-            Since becoming enlightened about the impact my choices have on the experience of users, 
-            I have given talks about accessibility to developers and designers at RBC, 
-            and even presented at a11yTO Conf 2015 about the future of web accessibility.
+        .product.product--best
+          h2.product__title Tier 2: #[br]Prudent
+          span.product__popular Popular choice!
+          p.product__price FREE
+          h3.product__features-title What's included
+          ul.product__features
+            li Download my resumé
+            li Connect with me on LinkedIn
+            li Schedule some time with me
+          a.product__action.link--btn(href='./tier-2.pug') Redeem Tier 2
 
-      //- section.secret
-      //-   //- h2 Secret Area
-      //-   p Welcome to my secret area. To gain access to more information about me,
-      //-     please complete the puzzle below.
-
-        //- .secret__puzzle
-        //-   .secret__puzzle__items
-        //-     span(id='broccoli' draggable='true' ondragstart='dragstart_handler(event)') 🥦
-        //-     span(id='apple' draggable='true' ondragstart='dragstart_handler(event)') 🍎
-        //-     span(id='avocado' draggable='true' ondragstart='dragstart_handler(event)') 🥑
-
-        //-   .secret__puzzle__areas
-        //-     .drop-area(ondragover='dragover_handler(event)' ondrop='drop_handler(event)')
-        //-     .drop-area(ondragover='dragover_handler(event)' ondrop='drop_handler(event)')
-        //-     .drop-area(ondragover='dragover_handler(event)' ondrop='drop_handler(event)')
+        .product
+          h2.product__title Tier 3: #[br]Confident
+          p.product__price FREE
+          h3.product__features-title What's included
+          ul.product__features
+            //- li Hit your candidate quota
+            li Book me a tour of your company
+            li Introduce me to the team
+            li Interview me
+          a.product__action.link--btn(href='./tier-3.pug') Redeem Tier 3
 
       footer
-        p Made with HTML & CSS in #{ new Date().getFullYear() }
+        - var today = new Date();
+        - var d = today.getDate();
+        - var y = today.getFullYear();
+        - var h = today.getHours();
+        - var m = today.getMinutes();
+        p.
+          last update: #[date #{ today.getMonth()+1 }-#{ d }-#{ y }] at #[time #{ h }:#{ m }] 
 
-  //- script(src='../js/main.ts')
-  include _analytics
+  script(type='text/javascript' src='../js/main.js')
+  include partials/_analytics

@@ -1,0 +1,85 @@
+.guestbook {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto 0;
+
+    @include media-bp-up(md) {
+      max-width: 65%;
+    }
+    
+    @include media-bp-up(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__form,
+  &__comments {
+    @include media-bp-up(lg) {
+      flex: 0 0 50%;
+      margin-right: 5rem;
+    }
+  }
+
+  &__comments {
+    > a {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  &__comment {
+    border: 2px solid var(--dd-white);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: .85rem;
+
+    &__name {
+      font-size: 1.6rem;
+    }
+  }
+  
+  label {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+
+  input,
+  textarea {
+    background-color: var(--dd-white);
+    border: 0;
+    border-radius: 8px;
+    color: var(--dd-black);
+    font-family: var(--dd-font-body);
+    font-size: 2rem;
+  }
+
+  input {
+    padding: 1rem;
+  }
+  
+  textarea {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  button {
+    background-color: var(--dd-guestbook-btn-clr-bg);
+    color: var(--dd-guestbook-btn-clr-txt);
+    font-size: 2rem;
+    font-weight: 600;
+    outline-color: var(--dd-guestbook-btn-clr-outline);
+    outline-offset: 6px;
+  }
+
+  #comments {
+    font-size: 2.5rem;
+  }
+}

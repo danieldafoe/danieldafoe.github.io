@@ -1,0 +1,12 @@
+.home-navigation {
+  top: 1rem;
+  position: fixed;
+  right: 2rem;
+  
+  a {
+    background-color: var(--dd-body-clr-bg);
+    color: var(--dd-white);
+    font-size: 2rem;
+    padding: .5rem;
+  }
+}

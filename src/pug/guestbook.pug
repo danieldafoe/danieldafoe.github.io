@@ -1,0 +1,27 @@
+- var pageTitle = 'Daniel Dafoe | Inclusive Web Developer in Toronto, Canada';
+
+doctype html
+html(lang='en')
+
+  include partials/_head
+
+  main.guestbook
+    h1 Guestbook
+    include partials/_home-navigation
+    .guestbook__inner
+      section.guestbook__comments
+        a(href='#comment-form') Leave a comment
+        #comments
+
+      form.guestbook__form(id='comment-form' name='guestbook' action='/guestbook' netlify)
+        .form-field 
+          label(for='comment') Comment
+          textarea(rows='10' id='comment' name='comment' maxlength='500' placeholder='It is a truth universally acknowledged, that a person who visits this site be in want of nothing further in life.')
+        .form-field
+          label(for='name') Name (optional)
+          input(type='text' id='name' name='name' placeholder='Jane Austen')
+
+        button.primary(type='submit') Submit Comment
+
+
+  script(type='text/javascript' src='../js/guestbook.js')

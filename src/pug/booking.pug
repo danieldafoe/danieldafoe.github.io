@@ -1,0 +1,17 @@
+- var pageTitle = 'Book Daniel Dafoe | Inclusive Web Developer in Toronto, Canada';
+
+doctype html
+html(lang='en')
+
+  include partials/_head
+  link(href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet")
+
+  body
+    main.booking
+      include partials/_home-navigation
+      .booking__inner
+        a(href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/danieldafoe?text_color=111111&primary_color=111111'});return false;").
+          Schedule time with me
+
+  script(src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async)
+  include partials/_analytics

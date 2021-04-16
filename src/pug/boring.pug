@@ -1,0 +1,22 @@
+- var pageTitle = 'Social media of Daniel Dafoe | Inclusive Web Developer in Toronto, Canada';
+- var ctaTitle = "Test";
+
+doctype html
+html(lang='en')
+
+  include partials/_head
+
+  body
+    main.boring
+      include partials/_home-navigation
+      .link-farm
+        p.
+          #[a(href='about.pug') About]
+          #[a(href='https://github.com/danieldafoe') Github]
+          #[a(href='https://instagram.com/danieldafoe') Instagram]
+          #[a(href='https://linkedin.com/in/danieldafoe') LinkedIn]
+          #[a(href='https://medium.com/danieldafoe') Medium]
+          #[a(href='https://danieldafoe.redbubble.com') Redbubble]
+          #[a(href='https://twitter.com/danieldafoe') Twitter]
+
+  include partials/_analytics

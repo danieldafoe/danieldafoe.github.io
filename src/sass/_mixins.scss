@@ -4,12 +4,12 @@
 
 @mixin background-color($background-color) {
   background-color: func.color($background-color);
-  background-color: var(--#{$background-color}, func.color($background-color));
+  background-color: var(--dd-#{$background-color}, func.color($background-color));
 }
 
 @mixin color($color) {
   color: func.color($color);
-  color: var(--#{$color}, func.color($color));
+  color: var(--dd-#{$color}, func.color($color));
 }
 
 // Buttons

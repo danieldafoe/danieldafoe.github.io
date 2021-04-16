@@ -1,0 +1,50 @@
+.banner {
+  align-items: center;
+  // TODO
+  // Handle reduced motion preference
+  animation: slide-in 1.5s 300ms;
+  //
+  background-color: var(--dd-banner-clr-bg);
+  border-radius: 8px 8px 0 0;
+  bottom: 0;
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.16), 0 -3px 6px rgba(0,0,0,0.23);
+  color: var(--dd-banner-clr-txt);
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+  left: 0;
+  padding: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  @include media-bp-up(md) {
+    flex-direction: row;
+    left: 50%;
+    padding: 1.75rem;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  button {
+    display: block;
+    font-size: 2rem;
+    margin: 1rem 0 0;
+    width: 100%;
+    
+    @include media-bp-up(md) {
+      font-size: inherit;
+      margin: 0 0 0 4rem;
+      width: auto;
+    }
+  }
+
+  span {
+    font-size: 2.5rem;
+  }
+}

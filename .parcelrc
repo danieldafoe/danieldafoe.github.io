@@ -1,5 +1,5 @@
 {
   transformers: {
-    'src/sass/*.scss': ['@parcel/transformer-sass']
+    'src/sass/**/*.scss': ['@parcel/transformer-sass']
   }
 }

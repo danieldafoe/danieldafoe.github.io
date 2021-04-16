@@ -3,80 +3,54 @@
 doctype html
 html(lang='en')
 
-include _head
+  include partials/_head
 
-body.about
-  h1.title
-    span.title__first-name About
+  body
+    main.about
+      h1 About
 
-  div.middle-area
-    div.intro
-      p.
-        Below are some popular websites you may want to check out to 
-        find out more about me. However, I've also written some things 
-        below if you'd prefer a different reading experience. 
+      .about__inner
+        h2 Introduction
+        p. 
+          Hi! I'm Daniel. I like pop punk music, reading novels written in the late 1800s, 
+          and I get upset with myself when I don't exercise every day. #[a(href='https://en.wikipedia.org/wiki/Serial_comma') Oxford commas] 
+          are of crucial importance to me. 
 
-      ul
-        li: a(href='https://linkedin.com/in/danieldafoe') LinkedIn
-        li: a(href='https://linkedin.com/in/danieldafoe') GitHub
-        li: a(href='https://medium.com/danieldafoe') Medium
+        h2 Education
+        p.
+          I once pursued education in Advertising, then Systems Analysis, and now English. It was always 
+          an aspiration of mine to study English, and in 2019 I decided to get on with it.
 
-      h2 Quick Facts #[span(role='presentation') ⏲]
+        h2 Experience
+        p.
+          Experience is a broad term. If we're discussing work experience solely, I had humble beginnings 
+          as a front desk worker at a pizza and video store in a town of 800 people. Beyond that I've worked 
+          at McDonald's, IKEA, and the Hudson's Bay Company.
 
-      ol
-        li.
-          I've spoken at a11yTO Camp about the future of web accessibility. I demonstrated 
-          and chatted about the SpeechSynthesis and SpeechRecognition Web APIs.
+        p.
+          Professionally, I've worked at small marketing agencies and large corporations alike. The Royal Bank 
+          of Canada is where I've spent the last #{ new Date().getFullYear() - 2015 } years of my life working as a 
+          Front-End Developer (#[acronym(title='Also Known As') AKA,] Web Developer, #[acronym(title='User Experience') UX] Developer).
 
-        li.
-          While I don't do it as often as I'd like, I love to write. I've posted a few things on Medium,
-          and I'm going to start contributing more–including technical articles.
+        h2 Testimonials
+        p.
+          Below are some quotes#[super *] I've pulled from various Slack conversations I've had 
+          while working from home. Hopefully this gives you an idea of what I'm like.
 
-        li.
-          I love to take - and edit - pictures. I'm not super professional, but I get a lot of joy 
-          out of being satisfied with a photo I've taken.
+        p.quote.
+          &ldquo;Your concern for user experience is really admiring&rdquo;
 
-        li.
-          I have two black pugs, Maisie and Hector. They're basically my children.
+        p.quote.
+          &ldquo;thank goodness we have you to ask about accessibility questions :)&rdquo;
 
+        p.quote.
 
-      h2 Who I Am #[span(role='presentation') 🤪]
+        p.quote.
+          &ldquo;#[acronym(title='Laugh Out Loud') lol] you're like the perfect blend of funny and smarts&rdquo;
 
-      p.
-        To begin, I'd like to formally introduce this website. This is my playground. 
-        This website is a place where I can experiment with both code and design. I can 
-        test and iterate on the experiences I present and compose the sort of content 
-        I'd like to–including dangling prepositions.
+        p.quote.
+          &ldquo;your (#[em sic]) really good at developing&rdquo;
+      
+    include partials/_home-navigation
 
-      p.
-        Because I believe that people are more than their job title, I'll start by sharing 
-        some things about myself.
-        
-      p.
-        I love learning about languages–how they're different and how they're the same. 
-        Learning about their grammar structure is particularly fascinating to me. I'm a 
-        monolingual, but I can produce a decent chunk of Mandarin. I also happen to know a 
-        couple unpleasant things in Czech, among other things.
-
-      h2 Job #[span(role='presentation') 🏦]
-
-      p.
-        Currently, I'm a #[strong Senior Front-End Developer] at RBC in Toronto, Ontario. 
-        In my current role I work with a front-end stack involving Angular, ngrx, and Sass. 
-
-        
-      p.
-        Previously I've worked as a Quality Assurance Analyst and Hybrid Mobile App Developer. 
-        At various points in my life I've even worked at McDonald's, IKEA, and The Bay.
-
-      h2 Education #[span(role='presentation') 🎓]
-
-      p.
-        I'm currently doing a part-time double major in Linguistics and English at the University of Toronto. 
-        Before that, I graduated from a 3-year program at Sheridan College in Systems Analysis. Prior to that I
-        studied Advertising for 2 years at Mohawk College.
-
-      p.
-
-
-  include _analytics
+  include partials/_analytics

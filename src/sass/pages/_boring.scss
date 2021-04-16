@@ -1,0 +1,41 @@
+.boring {
+  padding: 0 2rem;
+
+  .link-farm {
+    font-size: 5rem;
+    max-width: 50%;
+
+    @include media-bp-up(sm) {
+      font-size: 6rem;
+    }
+
+    @include media-bp-up(md) {
+      font-size: 10rem;
+      margin: 3% auto 0;
+      max-width: 65%;
+    }
+
+    @include media-bp-up(lg) {
+      font-size: 12rem;
+    }
+
+    @include media-bp-up(xxl) {
+      text-align: center;
+    }
+
+    a {
+      color: var(--dd-white);
+      display: inline-block;
+      font-family: var(--dd-font-primary);
+      font-weight: 700;
+      letter-spacing: -3px;
+      transform: skew(10deg, 5deg);
+  
+      &:focus,
+      &:hover {
+        color: darken(#fff, 30%);
+        transform: skew(0deg, 5deg);
+      }
+    }
+  }
+}

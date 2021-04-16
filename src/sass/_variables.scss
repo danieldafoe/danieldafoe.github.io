@@ -1,30 +1,94 @@
-$font: Roboto, Cantarell, 'Segoe UI', 'Helvetica Neue', sans-serif;
+$font: Roboto, 'Roboto Condensed', Cantarell, 'Segoe UI', 'Helvetica Neue', sans-serif;
 
 :root {
-  --brand-dark: #111;
-  --brand-light: #e3e3e3;
-  --brand-primary: var(--brand-dark);
+  color-scheme: light dark;
 
-  --black: #111;
-  --white: #fff;
+  //
+
+  --dd-brand-dark: #202945;
+  --dd-brand-dark-secondary: #435691;
+  --dd-brand-dark-tertiary: #3fa;
+  --dd-brand-light: #002395;
+  --dd-brand-light-secondary: #3fa;
   
-  --body-bg: var(--brand-dark);
-  --body-clr: var(--brand-light);
-  --intro-bg: var(--brand-light);
-  --link: #fff;
-  --link-hover: #d29abb;
-  --section-secret: #25523B;
-  --skip-link-bg: var(--brand-light);
-  --skip-link-clr: var(--brand-dark);
+  --dd-brand-primary: var(--dd-brand-dark);
+  --dd-brand-secondary: var(--dd-brand-dark-secondary);
+  
+  --dd-black: #111;
+  --dd-white: #CDD1CC;
+
+  // Banner
+
+  --dd-banner-clr-bg: var(--dd-brand-dark-secondary);
+  --dd-banner-clr-txt: var(--dd-white);
+
+  // Body
+
+  --dd-body-clr-bg: var(--dd-brand-primary);
+  --dd-body-clr-txt: var(--dd-white);
+
+  // Buttons
+
+  --dd-btn-primary-clr-bg: var(--dd-brand-primary);
+  --dd-btn-primary-clr-txt: var(--dd-white);
+  --dd-btn-link-clr-bg: var(--dd-brand-primary);
+  --dd-btn-link-clr-txt: var(--dd-white);
+
+  // Forms
+
+  --dd-placeholder-clr: #3d3d3d;
+
+  // Guestbook
+
+  --dd-guestbook-btn-clr-bg: var(--dd-brand-dark-tertiary);
+  --dd-guestbook-btn-clr-outline: var(--dd-brand-dark-tertiary);
+  --dd-guestbook-btn-clr-txt: var(--dd-black);
+
+  // Link
+
+  --dd-link-clr: var(--dd-white);
+
+  // Logo
+
+  --dd-logo-accent: #4578A8;
+
+  // Product
+
+  --dd-product-clr-bg: var(--dd-brand-dark-secondary);
+  --dd-product-clr-txt: var(--dd-white);
+  --dd-product-popular-clr-bg: var(--dd-brand-dark-tertiary);
+  --dd-product-popular-clr-txt: var(--dd-black);
+  --dd-product-price-clr-txt: var(--dd-white);
+
+  // Skip
+
+  --dd-skip-link-clr-bg: var(--dd-white);
+  --dd-skip-link-clr-txt: var(--dd-brand-primary);
+
+  // Typography
+
+  --dd-font-primary: Inter, 'Helvetica Neue', Roboto, sans-serif;
+  --dd-font-secondary: Roboto, 'Helvetica Neue', sans-serif;
+  --dd-font-body: var(--dd-font-secondary);
 
   @media (prefers-color-scheme: light) {
-    --body-bg: var(--brand-light);
-    --body-clr: var(--brand-dark);
-    --brand-primary: var(--brand-light);
-    --intro-bg: var(--brand-dark);
-    --link: var(--brand-dark);
-    --skip-link-bg: var(--brand-dark);
-    --skip-link-clr: var(--brand-light);
+    --dd-white: #fff;
+    --dd-brand-primary: var(--dd-brand-light);
+    --dd-brand-secondary: var(--dd-brand-light-secondary);
+
+    --dd-btn-primary-clr-bg: var(--dd-brand-primary);
+    --dd-btn-link-clr-bg: var(--dd-brand-primary);
+
+    --dd-banner-clr-bg: var(--dd-brand-light-secondary);
+    --dd-banner-clr-txt: var(--dd-white);
+
+    // --dd-product-clr-bg: #263152;
+    --dd-product-clr-bg: var(--dd-white);
+    --dd-product-clr-txt: var(--dd-black);
+    --dd-product-action-clr-bg: var(--dd-brand-light);
+    --dd-product-popular-clr-bg: var(--dd-brand-light-secondary);
+    --dd-product-popular-clr-txt: var(--dd-black);
+    --dd-product-price-clr-txt: var(--dd-brand-light);
   }
 }
 
@@ -33,5 +97,8 @@ $breakpoints: (
   sm: 385px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1120px,
+  xxl: 1240px,
+  xxxl: 1340px,
+  huge: 1500px
 );

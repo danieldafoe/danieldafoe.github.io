@@ -1,0 +1,91 @@
+.with-an-a {
+  background: url('down-with-defoe.jpg') center/35% repeat;
+  min-height: 100vh;
+  width: 100vw;
+
+  @include media-bp-up(md) {
+    background-size: 20%;
+  }
+
+  &__main {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  &__hero,
+  &__intro {
+    height: 100vh;
+    max-width: 100%;
+    width: 100vw;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    line-height: 1.4;
+
+    @include media-bp-up(lg) {
+      flex-direction: row;
+      font-size: 3rem;
+      margin: auto;
+      max-width: 65%;
+    }
+
+    h1 {
+      background-color: var(--dd-black);
+      font-size: 4.5rem;
+      font-weight: 900;
+      left: 50%;
+      letter-spacing: 20px;
+      padding: 2rem 2rem 2rem 4rem;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include media-bp-up(md) {
+        font-size: 10rem;
+        padding: 8rem 8rem 8rem 10rem;
+      }
+    }
+  }
+
+  &__intro {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 10rem;
+
+    &__inner {
+      background-color: var(--dd-black);
+      font-size: 3rem;
+      font-family: serif;
+      margin: auto;
+      max-width: 100%;
+      padding: 3rem;
+
+      @include media-bp-up(md) {
+        font-size: 5rem;
+        max-width: 70%;
+        padding: 6rem;
+      }
+
+      @include media-bp-up(xxl) {
+        max-width: 60%;
+      }
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 4.5rem;
+      }
+    }
+  }
+
+  .home-navigation {
+    a {
+      background-color: var(--dd-black);
+    }
+  }
+}
